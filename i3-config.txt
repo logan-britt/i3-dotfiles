@@ -1,0 +1,21 @@
+#####################################################
+#                                                   #
+# This runs the setup and customization of i3-gaps. #
+#                                                   #
+#####################################################
+
+# sets up the background wallpaper
+exec_always feh --bg-scale /wallpapers/sfw/*
+
+# sets up the window compositer
+exec --no-startup-id picom
+
+# sets up the status bar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# sets the window borders must be zero if gaps are enabled
+for_window [class=".*"] border pixel 0
+
+# creates the gaps if they are enabled
+gaps inner set 10
+gaps outer set 10

@@ -1,0 +1,19 @@
+; this is the bar for the top of the screen
+[bar:topbar]
+bottom = false
+
+;modules-left = menu
+modules-center = pulseaudio network
+modules-right = battery clock
+
+;font-0 = 
+
+; this is the bar that goes at the bottom of the screen
+[bar:bottombar]
+bottom = true
+
+modules-left = filesystem
+modules-center = temperature
+modules-right = memory cpu
+
+;font-0 =

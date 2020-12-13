@@ -1,0 +1,25 @@
+# blur contolls
+blur : {
+  method = "dual_kawase";
+  strength = 2;
+};
+
+# opacity controlls
+opacity-rule = [
+  # add new window opacities here
+
+  # configure opacity for polybars
+  "80:class_g = 'polybar' ",
+
+  # here we hanel the tor opacity rules
+  "60:class_g = 'Tor' &&  focused",
+  "40:class_g = 'Tor' && !focused",
+
+  # handels the opacity for the vscode windows
+  "60:class_g = 'Code' &&  focused",
+  "40:class_g = 'Code' && !focused",
+  
+  # handels the opacity for the alacritty windows
+  "60:class_g = 'Alacritty' &&  focused",
+  "40:class_g = 'Alacritty' && !focused"
+];
